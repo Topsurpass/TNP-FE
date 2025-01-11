@@ -1,8 +1,26 @@
+import shwPreset from './src/@plugins/global-preset';
+
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+const config = {
+	darkMode: ['class'],
+	content: [
+		'./pages/**/*.{ts,tsx}',
+		'./components/**/*.{ts,tsx}',
+		'./app/**/*.{ts,tsx}',
+		'./src/**/*.{ts,tsx}',
+		'./node_modules/rizzui/dist/*.{js,ts,jsx,tsx}',
+	],
+	prefix: '',
 	theme: {
-		extend: {},
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px',
+			},
+		},
 	},
-	plugins: [],
+	presets: [shwPreset],
 };
+
+export default config;
