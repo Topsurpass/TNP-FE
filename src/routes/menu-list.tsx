@@ -1,12 +1,10 @@
-import {
-	BsGear,
-	// BsKanban
-} from 'react-icons/bs';
+import { BsGear } from 'react-icons/bs';
 import { LuLayoutDashboard } from 'react-icons/lu';
-import { BsKanban } from 'react-icons/bs';
-import { RiTeamLine, RiExchange2Line } from 'react-icons/ri';
-import { IoCalendarNumberOutline, IoPeopleSharp } from 'react-icons/io5';
+import { ImBooks } from 'react-icons/im';
 import { SideNavItem } from '../types/sidenav-item';
+import { BookHeadphones } from 'lucide-react';
+import { MdQuiz } from 'react-icons/md';
+import { CgProfile } from 'react-icons/cg';
 
 const SIDENAV_ITEMS: SideNavItem[] = [
 	{
@@ -14,44 +12,39 @@ const SIDENAV_ITEMS: SideNavItem[] = [
 		menuList: [
 			{
 				title: 'Dashboard',
-				path: '/dashboard',
+				path: '/',
 				icon: <LuLayoutDashboard size={20} />,
 			},
+			//{
+			//	title: 'Financial',
+			//	path: '/financial',
+			//	icon: <BsKanban size={20} />,
+			//	submenu: true,
+			//	subMenuItems: [
+			//		{ title: 'Overview', path: '/financial/overview' },
+			//		{ title: 'Transactions', path: '/financial/transactions' },
+			//		{ title: 'Requisitions', path: '/financial/requisitions' },
+			//		{
+			//			title: 'Bank Statements',
+			//			path: '/financial/bank-statement',
+			//		},
+			//		{ title: 'Reports', path: '/financial/reports' },
+			//	],
+			//},
 			{
-				title: 'Financial',
-				path: '/financial',
-				icon: <BsKanban size={20} />,
-				submenu: true,
-				subMenuItems: [
-					{ title: 'Overview', path: '/financial/overview' },
-					{ title: 'Transactions', path: '/financial/transactions' },
-					{ title: 'Requisitions', path: '/financial/requisitions' },
-					{
-						title: 'Bank Statements',
-						path: '/financial/bank-statement',
-					},
-					{ title: 'Reports', path: '/financial/reports' },
-				],
+				title: 'Teachings',
+				path: '/teachings',
+				icon: <ImBooks size={20} />,
 			},
 			{
-				title: 'Church Branches',
-				path: '/branches',
-				icon: <IoPeopleSharp size={20} />,
+				title: 'Quizzes',
+				path: '/quizzes',
+				icon: <MdQuiz size={20} />,
 			},
 			{
-				title: "Members' Mgt.",
-				path: '/members',
-				icon: <IoPeopleSharp size={20} />,
-			},
-			{
-				title: 'Ministries',
-				path: '/ministries',
-				icon: <RiExchange2Line size={20} />,
-			},
-			{
-				title: 'Missional Communities',
-				path: '/mc',
-				icon: <RiTeamLine size={20} />,
+				title: 'Messages',
+				path: '/messages',
+				icon: <BookHeadphones size={20} />,
 			},
 		],
 	},
@@ -59,24 +52,14 @@ const SIDENAV_ITEMS: SideNavItem[] = [
 		title: 'Others',
 		menuList: [
 			{
-				title: 'Communications',
-				path: '/communications',
-				icon: <BsGear size={20} />,
-				submenu: true,
-				subMenuItems: [
-					{ title: 'SMS', path: '/communications/sms' },
-					{ title: 'EMAIL', path: '/communications/email' },
-				],
-			},
-			{
-				title: 'Events',
-				path: '/event',
-				icon: <IoCalendarNumberOutline size={20} />,
-			},
-			{
 				title: 'Setting',
 				path: '/setting',
 				icon: <BsGear size={20} />,
+			},
+			{
+				title: 'My profile',
+				path: '/profile',
+				icon: <CgProfile size={20} />,
 			},
 		],
 	},

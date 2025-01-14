@@ -1,16 +1,16 @@
 import classNames from 'classnames';
-import { useSideBarToggle } from '../hooks/use-sidebar-toggle';
-import SideBarMenuGroup from './sidebar-menu-group';
-import SIDENAV_ITEMS from '../routes/menu-list';
-import { cn } from '../lib/utils';
-import logoSvg from '../../public/logo2.svg';
-import { SideNavItem } from '../types/sidenav-item';
+import { useSideBarToggle } from '@/hooks/use-sidebar-toggle';
+import SideBarMenuGroup from '@/components/sidebar/sidebar-menu-group';
+import SIDENAV_ITEMS from '@/routes/menu-list';
+import { cn } from '@/lib/utils';
+import logoSvg from '/public/logo2.svg'
+import { SideNavItem } from '@/types/sidenav-item';
 
 function SideBar() {
 	const { toggleCollapse } = useSideBarToggle();
 
 	const asideStyle = classNames(
-		'bg-royal text-royal-foreground overflow-y-auto overflow-x-auto fixed h-full shadow-sm shadow-slate-500/40 transition duration-300 ease-in-out z-[50]',
+		'bg-royal text-white overflow-y-auto overflow-x-auto fixed h-full shadow-sm shadow-slate-500/40 transition duration-300 ease-in-out z-[50]',
 		{
 			'w-[20rem]': !toggleCollapse,
 			'sm:w-[5.4rem] sm:left-0 left-[-100%]': toggleCollapse,
@@ -22,7 +22,7 @@ function SideBar() {
 			<div
 				className={cn(
 					'sidebar-top fixed flex items-center px-4 py-4 backdrop-blur',
-					'shadow-sm shadow-slate-500/40',
+					//'shadow-sm shadow-slate-500/40',
 					{
 						'w-[20rem]': !toggleCollapse,
 						'left-[-100%] sm:left-0 sm:w-[5.4rem]': toggleCollapse,

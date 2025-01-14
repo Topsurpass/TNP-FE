@@ -1,9 +1,9 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { BsChevronRight } from 'react-icons/bs';
-import { MenuList } from '../types/sidenav-item';
-import { useSideBarToggle } from '../hooks/use-sidebar-toggle';
-import { cn } from '../lib/utils';
+import { MenuList } from '@/types/sidenav-item';
+import { useSideBarToggle } from '@/hooks/use-sidebar-toggle';
+import { cn } from '@/lib/utils';
 
 export default function SideBarMenuItem({ item }: { item: MenuList }) {
 	const { toggleCollapse } = useSideBarToggle();
@@ -93,8 +93,8 @@ export default function SideBarMenuItem({ item }: { item: MenuList }) {
 			) : (
 				<Link
 					to={item.path}
-					// className={`${inactiveLink} ${item.path === pathname ? activeLink : ""}`}
-					className={`${inactiveLink} ${pathname.includes(item.path) ? activeLink : ''}`}
+					 className={`${inactiveLink} ${item.path === pathname ? activeLink : ""}`}
+					//className={`${inactiveLink} ${pathname.includes(item.path) ? activeLink : ''}`}
 				>
 					<div className="min-w-[20px]">{item.icon}</div>
 					{!toggleCollapse && (

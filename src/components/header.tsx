@@ -1,9 +1,9 @@
 import { BsList } from 'react-icons/bs';
 import { RiNotification2Line } from 'react-icons/ri';
-//import { IoLogInOutline } from 'react-icons/io5';
+import { IoLogInOutline } from 'react-icons/io5';
 import { useSideBarToggle } from '../hooks/use-sidebar-toggle';
-//import ThemeSwitcher from './theme-switcher';
-//import { Button } from '@/components/ui/button';
+import ThemeSwitcher from './theme-switcher';
+import { Button } from '../components/ui/button';
 import { cn } from '../lib/utils';
 //import useAuthStore from '@/stores/user-store';
 
@@ -35,22 +35,24 @@ export default function Header() {
 				</button>
 
 				<div className="order-1 flex items-center justify-between gap-10 sm:order-2">
-					<div className="">{/*<ThemeSwitcher />*/}</div>
+					<div className="">
+						<ThemeSwitcher />
+					</div>
 					<div>
 						<RiNotification2Line size={20} cursor="pointer" />
 					</div>
 					<div>
-						{/*<Button
+						<Button
 							variant="outline"
 							size="icon"
-							onClick={() => logout()}
+							onClick={() => {}}
 						>
 							<IoLogInOutline
 								size={23}
 								color="red"
 								cursor="pointer"
 							/>
-						</Button>*/}
+						</Button>
 					</div>
 				</div>
 			</div>

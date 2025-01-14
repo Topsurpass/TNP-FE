@@ -1,7 +1,7 @@
-import { useSideBarToggle } from '../hooks/use-sidebar-toggle';
-import { MenuList, SideNavItem } from '../types/sidenav-item';
-import SideBarMenuItem from './sidebar-menu-item';
-import { cn } from '../lib/utils';
+import { useSideBarToggle } from '@/hooks/use-sidebar-toggle';
+import { MenuList, SideNavItem } from '@/types/sidenav-item';
+import SideBarMenuItem from '@/components/sidebar/sidebar-menu-item';
+import { cn } from '@/lib/utils';
 
 function SideBarMenuGroup({ menuGroup }: { menuGroup: SideNavItem }) {
 	const { toggleCollapse } = useSideBarToggle();

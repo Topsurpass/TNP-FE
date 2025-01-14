@@ -1,6 +1,11 @@
-import RouteRenderer from './routes/route-renderer';
+import RouteRenderer from '@/routes/route-renderer';
+import Provider from '@/providers';
 function App() {
-	return <RouteRenderer />;
+	return (
+		<Provider>
+			<RouteRenderer />
+		</Provider>
+	);
 }
 
 export default App;

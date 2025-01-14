@@ -1,8 +1,11 @@
-//import ErrorPage from '@/pages/error';
-import ErrorPage from '../pages/error';
-import Home from '../pages/home';
-import RootLayout from '../layout/root-layout';
-import Dashboard from '../pages/dashboard';
+import ErrorPage from '@/pages/error';
+import Teachings from '@/pages/teachings';
+import RootLayout from '@/layout/root-layout';
+import Dashboard from '@/pages/dashboard';
+import Quizzes from '@/pages/quizzes';
+import Messages from '@/pages/messages';
+import Settings from '@/pages/settings';
+import Profile from '@/pages/profile';
 
 const routeConfig = [
 	{
@@ -11,11 +14,27 @@ const routeConfig = [
 		children: [
 			{
 				index: true,
-				element: <Home />,
+				element: <Dashboard />,
 			},
 			{
-				path: '/dashboard',
-				element: <Dashboard />,
+				path: 'teachings',
+				element: <Teachings />,
+			},
+			{
+				path: 'quizzes',
+				element: <Quizzes />,
+			},
+			{
+				path: 'messages',
+				element: <Messages />,
+			},
+			{
+				path: 'profile',
+				element: <Profile />,
+			},
+			{
+				path: 'setting',
+				element: <Settings />,
 			},
 		],
 	},
