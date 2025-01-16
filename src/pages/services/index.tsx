@@ -1,7 +1,3 @@
 export default function Services() {
-	return (
-		<div className="flex flex-col items-center justify-center text-center px-6 ">
-			Services
-		</div>
-	);
+	return <div className="p-8  min-h-screen">Services</div>;
 }

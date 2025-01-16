@@ -1,7 +1,4 @@
 export default function About() {
-	return (
-		<div className="flex flex-col items-center justify-center text-center px-6 ">
-			About
-		</div>
-	);
+	return <div className="p-8  min-h-screen">About</div>;
+	
 }

@@ -1,7 +1,3 @@
 export default function Contact() {
-	return (
-		<div className="flex flex-col items-center justify-center text-center px-6 ">
-			Contact
-		</div>
-	);
+	return <div className="p-8  min-h-screen">Contact</div>;
 }

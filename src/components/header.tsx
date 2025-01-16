@@ -10,7 +10,7 @@ export default function Header() {
 	};
 
 	const headerStyle = cn(
-		'bg-sidebar fixed top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 shadow-sm shadow-slate-500/40',
+		'bg-sidebar fixed top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 shadow-sm shadow-slate-500/40 bg-gradient-to-br from-teal-100 via-blue-300 to-indigo-500',
 		{
 			'sm:pl-[20rem]': !toggleCollapse,
 			'sm:pl-[5.6rem]': toggleCollapse,

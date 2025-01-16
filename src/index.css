@@ -168,7 +168,7 @@
   flex-wrap: wrap;
   justify-items: center;
   align-items: center;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   overflow: hidden;
   /*border-right: 0.05em solid black; */
   animation: typing-name 8.5s steps(50, end) 2.5s forwards infinite;
