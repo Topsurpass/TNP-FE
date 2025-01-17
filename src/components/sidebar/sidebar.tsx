@@ -3,7 +3,6 @@ import { useSideBarToggle } from '@/hooks/use-sidebar-toggle';
 import SideBarMenuGroup from '@/components/sidebar/sidebar-menu-group';
 import SIDENAV_ITEMS from '@/routes/menu-list';
 import { cn } from '@/lib/utils';
-import logoSvg from '/public/logo2.svg'
 import { SideNavItem } from '@/types/sidenav-item';
 import HeroPic from '@/assets/me-hero.jpg';
 
