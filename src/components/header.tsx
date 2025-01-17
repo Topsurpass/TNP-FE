@@ -1,21 +1,16 @@
 import { BsList } from 'react-icons/bs';
-import { RiNotification2Line } from 'react-icons/ri';
-import { IoLogInOutline } from 'react-icons/io5';
 import { useSideBarToggle } from '../hooks/use-sidebar-toggle';
 import ThemeSwitcher from './theme-switcher';
-import { Button } from '../components/ui/button';
 import { cn } from '../lib/utils';
-//import useAuthStore from '@/stores/user-store';
 
 export default function Header() {
 	const { toggleCollapse, invokeToggleCollapse } = useSideBarToggle();
-	//const logout = useAuthStore((state) => state.reset);
 	const sidebarToggle = () => {
 		invokeToggleCollapse();
 	};
 
 	const headerStyle = cn(
-		'bg-sidebar fixed top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 shadow-sm shadow-slate-500/40',
+		'bg-sidebar fixed top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 shadow-sm shadow-slate-500/40 bg-gradient-to-br from-teal-100 via-blue-300 to-indigo-500',
 		{
 			'sm:pl-[20rem]': !toggleCollapse,
 			'sm:pl-[5.6rem]': toggleCollapse,
@@ -38,22 +33,7 @@ export default function Header() {
 					<div className="">
 						<ThemeSwitcher />
 					</div>
-					<div>
-						<RiNotification2Line size={20} cursor="pointer" />
-					</div>
-					<div>
-						<Button
-							variant="outline"
-							size="icon"
-							onClick={() => {}}
-						>
-							<IoLogInOutline
-								size={23}
-								color="red"
-								cursor="pointer"
-							/>
-						</Button>
-					</div>
+		
 				</div>
 			</div>
 		</header>

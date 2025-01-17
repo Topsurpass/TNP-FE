@@ -28,8 +28,8 @@
 		--accent-foreground: 0 0% 9%; /* hsl(222.2 47.4% 11.2%) */
 		--destructive: 0 84.2% 60.2%; /* hsl( 0 84.2% 60.2%) */
 		--destructive-foreground: 0 0% 98%; /* hsl(210 40% 98%) */
-		--royal: 225 80% 35%; /* hsl(238, 34%, 42%) */
-		--royal-foreground: 0 0% 81%; /* hsl(0 0% 81%) */
+		--royal: 230, 30%, 40%; /* A cooler, slightly desaturated royal blue */
+		--royal-foreground: 0, 0%, 85%;
 		--border: 0 0% 89.8%; /* hsl(214.3 31.8% 91.4%) */
 		--input: 0 0% 89.8%; /* hsl(214.3 31.8% 91.4%) */
 		--ring: 0 0% 3.9%; /* hsl(221.2 83.2% 53.3%) */
@@ -71,7 +71,7 @@
 		--accent-foreground: 0 0% 90%; /* Light accent text */
 		--destructive: 0 84.2% 60.2%; /* Red color for destructive */
 		--destructive-foreground: 0 0% 100%; /* White text for destructive */
-		--royal: 225 80% 35%; /* Royal blue remains same */
+		--royal: 210, 60%, 35%; /* Royal blue remains same */
 		--royal-foreground: 0 0% 90%; /* Lighter text color for royal */
 		--border: 0 0% 25%; /* Darker border */
 		--input: 0 0% 30%; /* Darker input background */
@@ -160,4 +160,34 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* Add typing effect for the name */
+.typing-effect-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  /*border-right: 0.05em solid black; */
+  animation: typing-name 8.5s steps(50, end) 2.5s forwards infinite;
+}
+
+@keyframes typing-name {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes deleting-name {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
 }

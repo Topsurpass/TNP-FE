@@ -5,6 +5,8 @@ import SIDENAV_ITEMS from '@/routes/menu-list';
 import { cn } from '@/lib/utils';
 import logoSvg from '/public/logo2.svg'
 import { SideNavItem } from '@/types/sidenav-item';
+import HeroPic from '@/assets/me-hero.jpg';
+
 
 function SideBar() {
 	const { toggleCollapse } = useSideBarToggle();
@@ -30,18 +32,17 @@ function SideBar() {
 				)}
 			>
 				<div className="flex gap-3">
-					<img src={logoSvg} alt="logo" className="h-12 w-12" />
+					<img src={HeroPic} alt="logo" className="h-12 w-12 rounded-full" />
 					<div
 						className={cn('min-w-max pl-2', {
 							hidden: toggleCollapse,
 						})}
 					>
 						<h3 className="text-2xl font-thin leading-5">
-							TNP
-							<span className="font-extrabold">Learners</span>
+							Olowosuyi Temitope
 						</h3>
 						<p className="w-40 pt-3 text-xs font-extralight leading-3">
-							The New Path Learners
+							Frontend Developer
 						</p>
 					</div>
 				</div>

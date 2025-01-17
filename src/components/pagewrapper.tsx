@@ -5,10 +5,10 @@ import { cn } from '../lib/utils';
 export default function PageWrapper({ children }: { children: ReactNode }) {
 	const { toggleCollapse } = useSideBarToggle();
 	const bodyStyle = cn(
-		'bg-background flex flex-col mt-16 h-full overflow-y-auto',
+		'bg-background flex flex-col mt-14 h-full overflow-y-auto',
 		{
 			'sm:pl-[20rem]': !toggleCollapse,
-			'sm:pl-[6.4rem]': toggleCollapse,
+			'sm:pl-[5.4rem]': toggleCollapse,
 		}
 	);
 

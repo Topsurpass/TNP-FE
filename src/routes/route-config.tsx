@@ -1,11 +1,11 @@
 import ErrorPage from '@/pages/error';
-import Teachings from '@/pages/teachings';
+import About from '@/pages/about';
 import RootLayout from '@/layout/root-layout';
-import Dashboard from '@/pages/dashboard';
-import Quizzes from '@/pages/quizzes';
-import Messages from '@/pages/messages';
-import Settings from '@/pages/settings';
-import Profile from '@/pages/profile';
+import Home from '@/pages/home';
+import Resume from '@/pages/resume';
+import Portfolio from '@/pages/portfolio';
+import Contact from '@/pages/contact';
+import Services from '@/pages/services';
 
 const routeConfig = [
 	{
@@ -14,27 +14,27 @@ const routeConfig = [
 		children: [
 			{
 				index: true,
-				element: <Dashboard />,
+				element: <Home />,
 			},
 			{
-				path: 'teachings',
-				element: <Teachings />,
+				path: 'about',
+				element: <About />,
 			},
 			{
-				path: 'quizzes',
-				element: <Quizzes />,
+				path: 'resume',
+				element: <Resume />,
 			},
 			{
-				path: 'messages',
-				element: <Messages />,
+				path: 'portfolio',
+				element: <Portfolio />,
 			},
 			{
-				path: 'profile',
-				element: <Profile />,
+				path: 'services',
+				element: <Services />,
 			},
 			{
-				path: 'setting',
-				element: <Settings />,
+				path: 'contact',
+				element: <Contact />,
 			},
 		],
 	},
